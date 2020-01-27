@@ -4,10 +4,10 @@
 #
 Name     : php-raphf
 Version  : 2.0.1
-Release  : 3
+Release  : 4
 URL      : https://pecl.php.net/get/raphf-2.0.1.tgz
 Source0  : https://pecl.php.net/get/raphf-2.0.1.tgz
-Summary  : A reusable split-off of pecl_http's persistent handle and resource factory API
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause
 Requires: php-raphf-lib = %{version}-%{release}
@@ -24,7 +24,6 @@ Group: Development
 Requires: php-raphf-lib = %{version}-%{release}
 Provides: php-raphf-devel = %{version}-%{release}
 Requires: php-raphf = %{version}-%{release}
-Requires: php-raphf = %{version}-%{release}
 
 %description dev
 dev components for the php-raphf package.
@@ -40,6 +39,7 @@ lib components for the php-raphf package.
 
 %prep
 %setup -q -n raphf-2.0.1
+cd %{_builddir}/raphf-2.0.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -63,4 +63,4 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20180731/raphf.so
+/usr/lib64/extensions/no-debug-non-zts-20190902/raphf.so
