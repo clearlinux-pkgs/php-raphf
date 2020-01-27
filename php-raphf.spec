@@ -4,7 +4,7 @@
 #
 Name     : php-raphf
 Version  : 2.0.1
-Release  : 2
+Release  : 3
 URL      : https://pecl.php.net/get/raphf-2.0.1.tgz
 Source0  : https://pecl.php.net/get/raphf-2.0.1.tgz
 Summary  : A reusable split-off of pecl_http's persistent handle and resource factory API
