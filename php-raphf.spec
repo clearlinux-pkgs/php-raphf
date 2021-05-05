@@ -4,7 +4,7 @@
 #
 Name     : php-raphf
 Version  : 2.0.1
-Release  : 7
+Release  : 8
 URL      : https://pecl.php.net/get/raphf-2.0.1.tgz
 Source0  : https://pecl.php.net/get/raphf-2.0.1.tgz
 Summary  : No detailed summary available
@@ -46,6 +46,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 phpize
+autoupdate
 %configure
 make  %{?_smp_mflags}
 
@@ -63,4 +64,4 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20190902/raphf.so
+/usr/lib64/extensions/no-debug-non-zts-20200930/raphf.so
