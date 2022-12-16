@@ -4,13 +4,14 @@
 #
 Name     : php-raphf
 Version  : 2.0.1
-Release  : 28
+Release  : 29
 URL      : https://pecl.php.net/get/raphf-2.0.1.tgz
 Source0  : https://pecl.php.net/get/raphf-2.0.1.tgz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : BSD-2-Clause
 Requires: php-raphf-lib = %{version}-%{release}
+Requires: php-raphf-license = %{version}-%{release}
 BuildRequires : buildreq-php
 BuildRequires : util-linux
 
@@ -32,9 +33,18 @@ dev components for the php-raphf package.
 %package lib
 Summary: lib components for the php-raphf package.
 Group: Libraries
+Requires: php-raphf-license = %{version}-%{release}
 
 %description lib
 lib components for the php-raphf package.
+
+
+%package license
+Summary: license components for the php-raphf package.
+Group: Default
+
+%description license
+license components for the php-raphf package.
 
 
 %prep
@@ -50,6 +60,8 @@ phpize
 make  %{?_smp_mflags}
 
 %install
+mkdir -p %{buildroot}/usr/share/package-licenses/php-raphf
+cp %{_builddir}/raphf-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/php-raphf/d1612d99e29c3d2e8f9ccea2f877b1ba963a200b
 %make_install
 
 
@@ -63,4 +75,8 @@ make  %{?_smp_mflags}
 
 %files lib
 %defattr(-,root,root,-)
-/usr/lib64/extensions/no-debug-non-zts-20210902/raphf.so
+/usr/lib64/extensions/no-debug-non-zts-20220829/raphf.so
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/php-raphf/d1612d99e29c3d2e8f9ccea2f877b1ba963a200b
