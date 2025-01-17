@@ -7,7 +7,7 @@
 #
 Name     : php-raphf
 Version  : 2.0.1
-Release  : 71
+Release  : 72
 URL      : https://pecl.php.net/get/raphf-2.0.1.tgz
 Source0  : https://pecl.php.net/get/raphf-2.0.1.tgz
 Summary  : No detailed summary available
